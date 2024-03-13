@@ -28,23 +28,100 @@ class HomePage extends StatelessWidget {
         child: Container(
           constraints: BoxConstraints.expand(),
           color: Colors.teal,
-          child: Center(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Red"),
-                Text("Green"),
-                Text("Blue"),
-                Text("Orange"),
-                Text("Gray"),
-                Text("Pink"),
+                Container(
+                  height: MediaQuery.of(context).size.height / 2.5,
+                  width: double.infinity,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          top: 0,
+                          left: 0,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 1"),
+                          )
+                      ),
+                      Positioned(
+                          top: (MediaQuery.of(context).size.width / 10),
+                          left: MediaQuery.of(context).size.width / 4.5,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 2"),
+                          )
+                      ),
+                      Positioned(
+                          top: (MediaQuery.of(context).size.width / 10 * 2),
+                          left: (MediaQuery.of(context).size.width / 4.5) * 2,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 3"),
+                          )
+                      ),
+                      Positioned(
+                          top: (MediaQuery.of(context).size.width / 10 * 3),
+                          left: (MediaQuery.of(context).size.width / 4.5)*3,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 4"),
+                          )
+                      ),
+
+
+                      Positioned(
+                          top: (MediaQuery.of(context).size.width / 10 * 4),
+                          left: (MediaQuery.of(context).size.width / 4.5)*2,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 5"),
+                          )
+                      ),
+                      Positioned(
+                          top: (MediaQuery.of(context).size.width / 10 * 5),
+                          left: (MediaQuery.of(context).size.width / 4.5),
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 6"),
+                          )
+                      ),
+                      Positioned(
+                          top:(MediaQuery.of(context).size.width / 10 * 6),
+                          left: 0,
+                          child: Container(
+                            alignment: Alignment.center,
+                            width: MediaQuery.of(context).size.width / 4.5,
+                            height: MediaQuery.of(context).size.width / 10,
+                            color: Colors.red,
+                            child: Text("Text 7"),
+                          )
+                      ),
+                    ],
+                  ),
+                )
               ],
             ),
           ),
         ),
-        
-      ),
     );
   }
 }
